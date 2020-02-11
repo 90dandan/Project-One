@@ -1,0 +1,47 @@
+.drums {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    background-color: black;
+    justify-content: space-around;
+}
+
+#snare {
+    display: grid;
+    background: rgb(1, 250, 1);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border:2px solid indigo;
+}
+
+#tom1 {
+    display: grid;
+    background-color: rgb(0, 251, 255);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border:2px solid indigo;
+}
+
+#tom2 {
+    display: grid;
+    background-color: rgb(255, 4, 0);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border:2px solid indigo;
+}
+
+#tom3 {
+    display: grid;
+    background-color: rgb(251, 255, 0);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border:2px solid indigo;
+}
+
+
+
+  
