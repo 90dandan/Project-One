@@ -15,11 +15,27 @@
     border:2px solid indigo;
 }
 
-
+#c0.flash {
+    display: grid;
+    background: indigo;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border:2px solid indigo;
+}
 
 #c1 {
     display: grid;
     background-color: rgb(0, 251, 255);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border:2px solid indigo;
+}
+
+#c1.flash {
+    display: grid;
+    background-color: indigo;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -35,9 +51,27 @@
     border:2px solid indigo;
 }
 
+#c2.flash {
+    display: grid;
+    background-color: indigo;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border:2px solid indigo;
+}
+
 #c3 {
     display: grid;
     background-color: rgb(251, 255, 0);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border:2px solid indigo;
+}
+
+#c3.flash {
+    display: grid;
+    background-color: indigo;
     width: 200px;
     height: 200px;
     border-radius: 50%;
