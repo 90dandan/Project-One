@@ -6,7 +6,7 @@
     justify-content: space-around;
 }
 
-#c0 {
+.c0 {
     display: grid;
     background: rgb(1, 250, 1);
     width: 200px;
@@ -15,16 +15,16 @@
     border:2px solid indigo;
 }
 
-#c0.flash {
+.c0flash {
     display: grid;
-    background: indigo;
+    background: rgb(0, 139, 0);
     width: 200px;
     height: 200px;
     border-radius: 50%;
     border:2px solid indigo;
 }
 
-#c1 {
+.c1 {
     display: grid;
     background-color: rgb(0, 251, 255);
     width: 200px;
@@ -33,34 +33,34 @@
     border:2px solid indigo;
 }
 
-#c1.flash {
+.c1flash {
     display: grid;
-    background-color: indigo;
+    background-color: rgb(2, 165, 165);
     width: 200px;
     height: 200px;
     border-radius: 50%;
     border:2px solid indigo;
 }
 
-#c2 {
+.c2 {
     display: grid;
     background-color: rgb(255, 4, 0);
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border:2px solid indigo;
+    border:2px solid rgb(75, 0, 130);
 }
 
-#c2.flash {
+.c2flash {
     display: grid;
-    background-color: indigo;
+    background-color: rgb(170, 4, 1);
     width: 200px;
     height: 200px;
     border-radius: 50%;
     border:2px solid indigo;
 }
 
-#c3 {
+.c3 {
     display: grid;
     background-color: rgb(251, 255, 0);
     width: 200px;
@@ -69,9 +69,9 @@
     border:2px solid indigo;
 }
 
-#c3.flash {
+.c3flash {
     display: grid;
-    background-color: indigo;
+    background-color: rgb(157, 160, 0);
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -79,8 +79,14 @@
 }
 
 #message {
+    display: grid;
+    grid-area: top;
+    height: 150px;
+    width: 300px;
+    flex-direction: row;
     color: rgb(236, 10, 217)
 }
+
 
 
 
