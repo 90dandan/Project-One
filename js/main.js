@@ -1,4 +1,4 @@
-let simonPlayed=[], userPlayed=[], win, round; 
+let simonPlayed=[], userPlayed=[], round; 
 
 let c0 = document.querySelector("#c0")
 let c1 = document.querySelector("#c1")
@@ -77,22 +77,22 @@ function showPattern() {
 function flash(drum) {
  if (drum === 1){
      c0.classList.replace('c0', 'c0flash');
-     setTimeout(lightsOn, 400)}
+     setTimeout(lightsOn, 800)}
  if (drum === 2){
      c1.classList.replace('c1', 'c1flash');
-     setTimeout(lightsOn, 400)}
+     setTimeout(lightsOn, 800)}
  if (drum === 3){
      c2.classList.replace('c2', 'c2flash');
-     setTimeout(lightsOn, 400)}
+     setTimeout(lightsOn, 800)}
  if (drum === 4){
      c3.classList.replace('c3', 'c3flash');
-     setTimeout(lightsOn, 400)}            
+     setTimeout(lightsOn, 800)}            
 }
 
 function checkPattern() { 
          for (let i=0;i < round;i++){
             if (userPlayed[i] !== simonPlayed[i]){
-            document.getElementById("message").innerHTML = "Whoops, Try Again!!";    
+            document.getElementById("message").innerHTML = "Whoops, Play Again!! Game Over :(";    
         }   if (userPlayed[i] === simonPlayed[i]) {
             document.getElementById("message").innerHTML = "Awesome, Keep Going";
         }
