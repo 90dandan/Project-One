@@ -92,7 +92,7 @@ function flash(drum) {
 function checkPattern() { 
          for (let i=0;i < round;i++){
             if (userPlayed[i] !== simonPlayed[i]){
-            document.getElementById("message").innerHTML = "Whoops, Play Again!! Game Over :(";    
+            document.getElementById("message").innerHTML = "Whoops, Play Again!! Game Over";    
         }   if (userPlayed[i] === simonPlayed[i]) {
             document.getElementById("message").innerHTML = "Awesome, Keep Going";
         }
