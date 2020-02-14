@@ -1,4 +1,4 @@
-let simonPlayed=[], userPlayed=[], win, level, round; 
+let simonPlayed=[], userPlayed=[], win, round, userTurn; 
 
 let c0 = document.querySelector("#c0")
 let c1 = document.querySelector("#c1")
@@ -9,18 +9,24 @@ c0.addEventListener('click', handleGreen)
 c1.addEventListener('click', handleBlue)
 c2.addEventListener('click', handleRed)
 c3.addEventListener('click', handleYellow)
+
+document.querySelector("#turnOn").addEventListener('click', on)
 document.getElementsByClassName("start")[0].addEventListener('click', start)
 
 function init() {
     win = false;
     simonPlayed = [];
     userPlayed = [];
-    level = 1;
-    round = 1;
+    round = 0;
+    userTurn = false;
+}
+
+function on() {
+    createPattern();
 }
 
 function start() {
-    createPattern();
+    showPattern();
 }
 
 function handleGreen() {
@@ -62,49 +68,48 @@ function createPattern() {
     for (var i = 0; i < 10; i++) {
         simonPlayed.push(Math.floor(Math.random() * 4) + 1);
         console.log(simonPlayed);
-        //showPattern();
     }
 }
 
 function showPattern() {
-    for (var i = 0; i < round.length; i++) {
-        setTimeout(flash(), 1000*i, simonPlayed[i]);
-        //checkPattern();
+    for (var i = 0; i <= round; i++) {
+        setTimeout(flash, 1000*i, simonPlayed[i]);
     }
+    round += 1;
+    userPlayed = [];
+    userTurn = true;
 }
 
 function flash(drum) {
  if (drum === 1){
-     c0.classList.replace('co0', 'c0flash')}
+     c0.classList.replace('c0', 'c0flash');
+     setTimeout(lightsOn, 400)}
  if (drum === 2){
-     c1.classList.replace('c1', 'c1flash')}
+     c1.classList.replace('c1', 'c1flash');
+     setTimeout(lightsOn, 400)}
  if (drum === 3){
-     c2.classList.replace('c2', 'c2flash')}
+     c2.classList.replace('c2', 'c2flash');
+     setTimeout(lightsOn, 400)}
  if (drum === 4){
-     c3.classList.replace('c3', 'c3flash')}            
-}
-
-function removeFlash() {
-    for (var i =0; i < round.length; i++) {
-        setTimeout(flash(), 300, simonPlayed[i]);
-    }
+     c3.classList.replace('c3', 'c3flash');
+     setTimeout(lightsOn, 400)}            
 }
 
 function checkPattern() {
-    if (userPlayed.length !== simonPlayed.length){
-        document.getElementById("message").innerHTML = "Bummer! Try Again!!"; 
-    } else (userPlayed[i] !== simonPlayed[i]);{
-        document.getElementById("message").innerHTML = "Whoops, Tri Again!!";
-    }                                           //check through i of userPlayed and simonPlayed for match
-}   //                                          if correct && level not 10 next level
-    //                                          if level 10
-    //                                          win = true
+    while (userTurn === true){
+        if (userPlayed.length !== simonPlayed.length){
+            document.getElementById("message").innerHTML = "Bummer! Try Again!!"; 
+        } else {
+            for(let i=0;i<simonPlayed.length;i++) 
+                if(userPlayed[i] !== simonPlayed[i]){
+                    document.getElementById("message").innerHTML = "Whoops, Try Again!!";
+                    userTurn = false;
+            } 
+        }
+    }   
+}
 
-// function toWin() {
-//    if (win = true) {
-//        document.getElementById('message').innerHTML = "You Win!!"}
-
-//     init();
+init();
 
 //start button, starts showPattern--
 //userPlayed push into array--
@@ -113,4 +118,3 @@ function checkPattern() {
 //if winning, call showPattern
 //loop until win or loss
 //pull from simon array push into curent game array check current agains userplayed;
-// }
