@@ -1,4 +1,4 @@
-let simonPlayed=[], userPlayed=[], win, round, userTurn; 
+let simonPlayed=[], userPlayed=[], win, round; 
 
 let c0 = document.querySelector("#c0")
 let c1 = document.querySelector("#c1")
@@ -12,13 +12,13 @@ c3.addEventListener('click', handleYellow)
 
 document.querySelector("#turnOn").addEventListener('click', on)
 document.getElementsByClassName("start")[0].addEventListener('click', start)
+document.querySelector("#check").addEventListener('click', checkPattern)
+let contMessage = document.querySelector("#message2")
 
 function init() {
-    win = false;
     simonPlayed = [];
     userPlayed = [];
     round = 0;
-    userTurn = false;
 }
 
 function on() {
@@ -27,34 +27,32 @@ function on() {
 
 function start() {
     showPattern();
+    contMessage.classList.add("shown");
+
 }
 
 function handleGreen() {
     userPlayed.push(1); 
     c0.classList.add('c0flash');
     setTimeout(lightsOn, 300);
-    console.log(userPlayed)
 }
 
 function handleBlue() {
     userPlayed.push(2);
     c1.classList.add('c1flash');
     setTimeout(lightsOn, 300);
-    console.log(userPlayed)
 }
 
 function handleRed() {
     userPlayed.push(3);
     c2.classList.add('c2flash');
     setTimeout(lightsOn, 300);
-    console.log(userPlayed)
 }
 
 function handleYellow() {
     userPlayed.push(4);
     c3.classList.add('c3flash');
     setTimeout(lightsOn, 300);
-    console.log(userPlayed)
 }
 
 function lightsOn() {
@@ -67,7 +65,6 @@ function lightsOn() {
 function createPattern() {
     for (var i = 0; i < 10; i++) {
         simonPlayed.push(Math.floor(Math.random() * 4) + 1);
-        console.log(simonPlayed);
     }
 }
 
@@ -76,8 +73,6 @@ function showPattern() {
         setTimeout(flash, 1000*i, simonPlayed[i]);
     }
     round += 1;
-    userPlayed = [];
-    userTurn = true;
 }
 
 function flash(drum) {
@@ -96,18 +91,15 @@ function flash(drum) {
 }
 
 function checkPattern() {
-    while (userTurn === true){
         if (userPlayed.length !== simonPlayed.length){
             document.getElementById("message").innerHTML = "Bummer! Try Again!!"; 
         } else {
             for(let i=0;i<simonPlayed.length;i++) 
-                if(userPlayed[i] !== simonPlayed[i]){
+                if (userPlayed[i] !== simonPlayed[i]){
                     document.getElementById("message").innerHTML = "Whoops, Try Again!!";
-                    userTurn = false;
-            } 
-        }
-    }   
-}
+        } userPlayed = [];
+    }
+}   
 
 init();
 

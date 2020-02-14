@@ -87,7 +87,18 @@
     color: rgb(236, 10, 217)
 }
 
+#message2 {
+    color: rgb(133, 3, 226);
+    font-size: large;
+    visibility: hidden;
+}
 
+#message2.shown {
+    color: rgb(133, 3, 226);
+    font-size: xx-large;
+    visibility: visible;
+    
+}
 
 
   
