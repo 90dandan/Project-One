@@ -4,6 +4,7 @@ let c0 = document.querySelector("#c0")
 let c1 = document.querySelector("#c1")
 let c2 = document.querySelector("#c2")
 let c3 = document.querySelector("#c3")
+let contMessage = document.querySelector("#message2")
 
 c0.addEventListener('click', handleGreen)
 c1.addEventListener('click', handleBlue)
@@ -13,7 +14,6 @@ c3.addEventListener('click', handleYellow)
 document.querySelector("#turnOn").addEventListener('click', on)
 document.getElementsByClassName("start")[0].addEventListener('click', start)
 document.querySelector("#check").addEventListener('click', checkPattern)
-let contMessage = document.querySelector("#message2")
 
 function init() {
     simonPlayed = [];
@@ -28,7 +28,6 @@ function on() {
 function start() {
     showPattern();
     contMessage.classList.add("shown");
-
 }
 
 function handleGreen() {
@@ -73,7 +72,7 @@ function showPattern() {
         setTimeout(flash, 1000*i, simonPlayed[i]);
     }
     round += 1;
-}
+} 
 
 function flash(drum) {
  if (drum === 1){
@@ -90,23 +89,14 @@ function flash(drum) {
      setTimeout(lightsOn, 400)}            
 }
 
-function checkPattern() {
-        if (userPlayed.length !== simonPlayed.length){
-            document.getElementById("message").innerHTML = "Bummer! Try Again!!"; 
-        } else {
-            for(let i=0;i<simonPlayed.length;i++) 
-                if (userPlayed[i] !== simonPlayed[i]){
-                    document.getElementById("message").innerHTML = "Whoops, Try Again!!";
-        } userPlayed = [];
-    }
-}   
+function checkPattern() { 
+         for (let i=0;i < round;i++){
+            if (userPlayed[i] !== simonPlayed[i]){
+            document.getElementById("message").innerHTML = "Whoops, Try Again!!";    
+        }   if (userPlayed[i] === simonPlayed[i]) {
+            document.getElementById("message").innerHTML = "Awesome, Keep Going";
+        }
+    } userPlayed = [];   
+}
 
 init();
-
-//start button, starts showPattern--
-//userPlayed push into array--
-//check length of array to match 
-//check for winning pattern
-//if winning, call showPattern
-//loop until win or loss
-//pull from simon array push into curent game array check current agains userplayed;
