@@ -18,7 +18,7 @@
 
 ![Wireframe](https://i.imgur.com/B6bFfb0.png)
 
-![gamepic](https://imgur.com/njdM65g)
+![gamepic](https://imgur.com/njdM65g.png)
 
 ## User Experience
 
