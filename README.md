@@ -16,9 +16,9 @@
 
 ## Screenshots
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2f138b08-9ec6-4a17-ab48-149588db15f0/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2f138b08-9ec6-4a17-ab48-149588db15f0/Untitled.png)
+![Wireframe](https://i.imgur.com/B6bFfb0.png)
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/16468716-18f5-422f-80db-acaf11d89a2c/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/16468716-18f5-422f-80db-acaf11d89a2c/Untitled.png)
+![In play pic](https://imgur.com/njdM65g)
 
 ## User Experience
 

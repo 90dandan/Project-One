@@ -1,10 +1,10 @@
 let simonPlayed=[], userPlayed=[], round; 
 
-let c0 = document.querySelector("#c0")
-let c1 = document.querySelector("#c1")
-let c2 = document.querySelector("#c2")
-let c3 = document.querySelector("#c3")
-let contMessage = document.querySelector("#message2")
+const c0 = document.querySelector("#c0")
+const c1 = document.querySelector("#c1")
+const c2 = document.querySelector("#c2")
+const c3 = document.querySelector("#c3")
+const contMessage = document.querySelector("#message2")
 
 c0.addEventListener('click', handleGreen)
 c1.addEventListener('click', handleBlue)
